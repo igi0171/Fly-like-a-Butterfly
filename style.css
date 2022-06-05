@@ -26,6 +26,15 @@ body {
   left: 580px;
 }
 
+.border-top {
+  width: 660px;
+  height: 50px;
+  position: absolute;
+  background-color: white;
+  z-index: +2;
+  top: -50px;
+}
+
 .night-sky {
   background-color: black;
   width: 500px;
