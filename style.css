@@ -11,10 +11,17 @@
   position: absolute;
 }
 
-.pseudo-ground {
+.ground {
   background-color: midnightblue;
   width: 500px;
   height: 150px;
   position: absolute;
   top: 580px; /* sets the top edge of the ground to units below the top edge of game container */
+}
+
+.butterfly {
+  background-color: yellow;
+  position: absolute;
+  width: 60px;
+  height: 45px;
 }
