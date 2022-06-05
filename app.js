@@ -29,4 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(butterflyBottom);
   }
   document.addEventListener("keyup", control); // "keyup" - when any key is pressed
+
+  function generateWebs() {
+    const webs = document.createElement("div");
+    webs.classList.add("webs"); // adds class
+  }
 });

@@ -25,3 +25,10 @@
   width: 60px;
   height: 45px;
 }
+
+.webs {
+  background-color: white;
+  width: 60px;
+  height: 300px;
+  position: absolute;
+}
