@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     butterfly.style.bottom = butterflyBottom + "px";
     butterfly.style.left = butterflyLeft + "px";
   }
-  let timerId = setInterval(startGame, 20); // calls startGame every 20 milliseconds //
+  let timerButterfly = setInterval(startGame, 20); // calls startGame every 20 milliseconds //
 
   function control(e) {
     if (e.keyCode === 32) {
@@ -31,9 +31,20 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("keyup", control); // "keyup" - when any key is pressed
 
   function generateWebs() {
+    let websLeft = 500;
+    let randomHeight = Math.random() * 60;
+    let websBottom = randomHeight;
     const webs = document.createElement("div");
     webs.classList.add("webs"); // adds class
     gameDisplay.appendChild(webs); // append webs div to game container
+    webs.style.left = websLeft + "px";
+    webs.style.bottom = websBottom + "px";
+
+    function moveWebs() {
+      websLeft -= 2;
+      webs.style.left = websLeft + "px";
+    }
+    let timerWebs = setInterval(moveWebs, 20);
   }
   generateWebs();
 });
