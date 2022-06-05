@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const butterfly = document.querySelector(".butterfly");
   const gameDisplay = document.querySelector(".game-container");
-  const ground = document.querySelector(".ground");
+  const grass = document.querySelector(".grass");
 
   let butterflyLeft = 220;
   let butterflyBottom = 100;

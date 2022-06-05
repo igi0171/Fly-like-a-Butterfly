@@ -1,18 +1,31 @@
+body {
+  display: flex; /* block-level flex container A flex container expands items to fill available free space or shrinks them to prevent overflow */
+}
+
 .game-container {
   width: 500px;
   height: 730px;
   position: absolute; /* uses the document body, and moves along with page scrolling */
+  left: 60px;
+}
+
+.border-left {
+  width: 60px;
+  height: 790px;
+  position: absolute;
+  background-color: white;
+  z-index: +1;
 }
 
 .night-sky {
-  background-color: midnightblue;
+  background-color: black;
   width: 500px;
   height: 580px;
   position: absolute;
 }
 
-.ground {
-  background-color: lawngreen;
+.grass {
+  background-color: darkseagreen;
   width: 500px;
   height: 150px;
   position: absolute;
