@@ -49,7 +49,10 @@ document.addEventListener("DOMContentLoaded", () => {
         clearInterval(timerWebs); // stop the webs timer setinterval from executing
         gameDisplay.removeChild(webs); // remove webs
       }
-      if (butterflyBottom === 0) {
+      if (
+        (websLeft > 200 && websLeft < 280 && butterflyLeft === 220) ||
+        butterflyBottom === 0
+      ) {
         gameOver();
       }
     }
@@ -60,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function gameOver() {
     clearInterval(timerButterfly);
+    console.log("game over");
     isGameOver = true;
     document.removeEventListener("keyup", control); // remove event listener at keyup
   }
