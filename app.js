@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let butterflyLeft = 220;
   let butterflyBottom = 100;
   let gravity = 2;
+  let isGameOver = false;
 
   function startGame() {
     butterflyBottom -= gravity;
@@ -48,9 +49,18 @@ document.addEventListener("DOMContentLoaded", () => {
         clearInterval(timerWebs); // stop the webs timer setinterval from executing
         gameDisplay.removeChild(webs); // remove webs
       }
+      if (butterflyBottom === 0) {
+        gameOver();
+      }
     }
     let timerWebs = setInterval(moveWebs, 20);
     setTimeout(generateWebs, 3000); // generates webs every 3 seconds
   }
   generateWebs();
+
+  function gameOver() {
+    clearInterval(timerButterfly);
+    isGameOver = true;
+    document.removeEventListener("keyup", control); // remove event listener at keyup
+  }
 });
