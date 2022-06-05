@@ -12,7 +12,7 @@
 }
 
 .ground {
-  background-color: midnightblue;
+  background-color: lawngreen;
   width: 500px;
   height: 150px;
   position: absolute;
@@ -27,7 +27,7 @@
 }
 
 .webs {
-  background-color: snow;
+  background-image: url("spiderweb.png");
   width: 60px;
   height: 300px;
   position: absolute;
