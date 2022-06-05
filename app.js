@@ -33,5 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function generateWebs() {
     const webs = document.createElement("div");
     webs.classList.add("webs"); // adds class
+    gameDisplay.appendChild(webs); // append webs div to game container
   }
+  generateWebs();
 });
