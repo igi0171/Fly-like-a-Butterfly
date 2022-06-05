@@ -1,0 +1,5 @@
+.game-container {
+  width: 500px;
+  height: 730px;
+  position: absolute; /* uses the document body, and moves along with page scrolling */
+}
