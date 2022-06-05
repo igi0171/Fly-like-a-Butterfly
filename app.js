@@ -63,7 +63,8 @@ document.addEventListener("DOMContentLoaded", () => {
         (websLeft > 200 &&
           websLeft < 280 &&
           butterflyLeft === 220 &&
-          butterflyBottom < websBottom + 153) ||
+          (butterflyBottom < websBottom + 153 ||
+            butterflyBottom > websBottom + gap - 200)) ||
         butterflyBottom === 0
       ) {
         gameOver();
