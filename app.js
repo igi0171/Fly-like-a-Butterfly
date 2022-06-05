@@ -43,6 +43,11 @@ document.addEventListener("DOMContentLoaded", () => {
     function moveWebs() {
       websLeft -= 2;
       webs.style.left = websLeft + "px";
+
+      if (websLeft === -60) {
+        clearInterval(timerWebs); // stop the webs timer setinterval from executing
+        gameDisplay.removeChild(webs); // remove webs
+      }
     }
     let timerWebs = setInterval(moveWebs, 20);
   }
