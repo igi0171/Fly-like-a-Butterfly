@@ -38,14 +38,14 @@ body {
 }
 
 .night-sky {
-  background-color: black;
+  background-image: url("night-sky-background.png");
   width: 526px;
   height: 610px;
   position: absolute;
 }
 
 .grass {
-  background-color: darkseagreen;
+  background-image: url("grass-background.png");
   width: 526px;
   height: 158px;
   position: absolute;
@@ -54,15 +54,54 @@ body {
 }
 
 .butterfly {
-  background-color: yellow;
+  background-image: url("butterfly.png");
   position: absolute;
   width: 63px;
   height: 47px;
 }
 
 .webs {
-  background-image: url("spiderweb.png");
+  background-image: url("spider-web.png");
   width: 63px;
   height: 316px;
   position: absolute;
+}
+
+@keyframes slideright {
+  /* animation */
+  from {
+    background-position: 10000%;
+  }
+  to {
+    background-position: 0%;
+  }
+}
+
+@-webkit-keyframes slideright {
+  /* chrome */
+  from {
+    background-position: 10000%;
+  }
+  to {
+    background-position: 0%;
+  }
+}
+
+.grass-container {
+  height: 158px;
+  width: 610px;
+  left: 84px;
+  position: absolute;
+}
+
+.grass-moving {
+  position: absolute;
+  top: 610px;
+  height: 158px;
+  background-image: url("grass-background.png");
+  background-repeat: repeat-x;
+  animation: slideright 100s infinite linear;
+  -webkit-animation: slideright 100s infinite linear;
+  width: 100%; /* 100% of containing block */
+  z-index: +1;
 }

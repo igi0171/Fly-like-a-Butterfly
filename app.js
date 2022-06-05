@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const butterfly = document.querySelector(".butterfly");
   const gameDisplay = document.querySelector(".game-container");
-  const grass = document.querySelector(".grass");
+  const grass = document.querySelector(".grass-moving");
 
   let butterflyLeft = 231;
   let butterflyBottom = 105;
@@ -83,5 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("game over");
     isGameOver = true;
     document.removeEventListener("keyup", control); // remove event listener at keyup
+    grass.classList.add("grass");
+    grass.classList.remove("grass-moving");
   }
 });
