@@ -6,11 +6,11 @@ body {
   width: 500px;
   height: 730px;
   position: absolute; /* uses the document body, and moves along with page scrolling */
-  left: 60px;
+  left: 80px;
 }
 
 .border-left {
-  width: 60px;
+  width: 80px;
   height: 790px;
   position: absolute;
   background-color: white;
