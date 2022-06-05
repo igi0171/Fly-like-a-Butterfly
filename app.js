@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
     let timerWebs = setInterval(moveWebs, 20);
+    setTimeout(generateWebs, 3000); // generates webs every 3 seconds
   }
   generateWebs();
 });
