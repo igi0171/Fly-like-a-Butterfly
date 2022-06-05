@@ -3,11 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const gameDisplay = document.querySelector(".game-container");
   const grass = document.querySelector(".grass");
 
-  let butterflyLeft = 220;
-  let butterflyBottom = 100;
+  let butterflyLeft = 231;
+  let butterflyBottom = 105;
   let gravity = 2;
   let isGameOver = false;
-  let gap = 430;
+  let gap = 452;
 
   function startGame() {
     butterflyBottom -= gravity;
@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function fly() {
-    if (butterflyBottom < 500) {
-      butterflyBottom += 50;
+    if (butterflyBottom < 526) {
+      butterflyBottom += 53;
     }
     butterfly.style.bottom = butterflyBottom + "px";
     console.log(butterflyBottom);
@@ -33,8 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("keyup", control); // "keyup" - when any key is pressed
 
   function generateWebs() {
-    let websLeft = 500;
-    let randomHeight = Math.random() * 60;
+    let websLeft = 526;
+    let randomHeight = Math.random() * 63;
     let websBottom = randomHeight;
     const webs = document.createElement("div");
     const topWebs = document.createElement("div");
@@ -54,18 +54,18 @@ document.addEventListener("DOMContentLoaded", () => {
       webs.style.left = websLeft + "px";
       topWebs.style.left = websLeft + "px";
 
-      if (websLeft === -60) {
+      if (websLeft === -63) {
         clearInterval(timerWebs); // stop the webs timer setinterval from executing
         gameDisplay.removeChild(webs); // remove webs
         gameDisplay.removeChild(topWebs);
       }
       if (
-        (websLeft > 200 &&
-          websLeft < 280 &&
-          butterflyLeft === 220 &&
-          (butterflyBottom < websBottom + 153 ||
-            butterflyBottom > websBottom + gap - 200)) ||
-        butterflyBottom === 0
+        (websLeft > 210 &&
+          websLeft < 295 &&
+          butterflyLeft === 231 &&
+          (butterflyBottom < websBottom + 161 ||
+            butterflyBottom > websBottom + gap - 210)) ||
+        butterflyBottom <= 0
       ) {
         gameOver();
         clearInterval(timerWebs);

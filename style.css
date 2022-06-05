@@ -3,64 +3,66 @@ body {
 }
 
 .game-container {
-  width: 500px;
-  height: 730px;
+  width: 526px;
+  height: 768px;
   position: absolute; /* uses the document body, and moves along with page scrolling */
-  left: 80px;
+  left: 84px;
 }
 
 .border-left {
-  width: 80px;
-  height: 790px;
+  width: 84px;
+  height: 831px;
   position: absolute;
   background-color: white;
   z-index: +2;
+  top: 0px;
+  left: 0px;
 }
 
 .border-right {
-  width: 80px;
-  height: 790px;
+  width: 84px;
+  height: 831px;
   position: absolute;
   background-color: white;
   z-index: +2;
-  left: 580px;
+  left: 610px;
 }
 
 .border-top {
-  width: 660px;
-  height: 50px;
+  width: 694px;
+  height: 53px;
   position: absolute;
   background-color: white;
   z-index: +2;
-  top: -50px;
+  top: -53px;
 }
 
 .night-sky {
   background-color: black;
-  width: 500px;
-  height: 580px;
+  width: 526px;
+  height: 610px;
   position: absolute;
 }
 
 .grass {
   background-color: darkseagreen;
-  width: 500px;
-  height: 150px;
+  width: 526px;
+  height: 158px;
   position: absolute;
-  top: 580px; /* sets the top edge of the ground to units below the top edge of game container */
+  top: 610px; /* sets the top edge of the ground to units below the top edge of game container */
   z-index: +1; /* put in front of webs */
 }
 
 .butterfly {
   background-color: yellow;
   position: absolute;
-  width: 60px;
-  height: 45px;
+  width: 63px;
+  height: 47px;
 }
 
 .webs {
   background-image: url("spiderweb.png");
-  width: 60px;
-  height: 300px;
+  width: 63px;
+  height: 316px;
   position: absolute;
 }
