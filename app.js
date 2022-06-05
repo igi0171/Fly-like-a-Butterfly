@@ -52,10 +52,14 @@ document.addEventListener("DOMContentLoaded", () => {
         gameDisplay.removeChild(webs); // remove webs
       }
       if (
-        (websLeft > 200 && websLeft < 280 && butterflyLeft === 220) ||
+        (websLeft > 200 &&
+          websLeft < 280 &&
+          butterflyLeft === 220 &&
+          butterflyBottom < websBottom + 153) ||
         butterflyBottom === 0
       ) {
         gameOver();
+        clearInterval(timerWebs);
       }
     }
     let timerWebs = setInterval(moveWebs, 20);
