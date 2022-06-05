@@ -36,7 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let randomHeight = Math.random() * 60;
     let websBottom = randomHeight;
     const webs = document.createElement("div");
-    webs.classList.add("webs"); // adds class
+    if (!isGameOver) {
+      webs.classList.add("webs"); // adds class
+    }
     gameDisplay.appendChild(webs); // append webs div to game container
     webs.style.left = websLeft + "px";
     webs.style.bottom = websBottom + "px";
