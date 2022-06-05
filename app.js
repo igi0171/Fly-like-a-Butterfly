@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let butterflyBottom = 100;
   let gravity = 2;
   let isGameOver = false;
+  let gap = 430;
 
   function startGame() {
     butterflyBottom -= gravity;
@@ -36,12 +37,17 @@ document.addEventListener("DOMContentLoaded", () => {
     let randomHeight = Math.random() * 60;
     let websBottom = randomHeight;
     const webs = document.createElement("div");
+    const topWebs = document.createElement("div");
     if (!isGameOver) {
       webs.classList.add("webs"); // adds class
+      topWebs.classList.add("webs");
     }
     gameDisplay.appendChild(webs); // append webs div to game container
+    gameDisplay.appendChild(topWebs);
     webs.style.left = websLeft + "px";
+    topWebs.style.left = websLeft + "px";
     webs.style.bottom = websBottom + "px";
+    topWebs.style.bottom = websBottom + gap + "px";
 
     function moveWebs() {
       websLeft -= 2;
