@@ -1,20 +1,27 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("click", startGame);
+document.getElementById("score").innerHTML = `Click to play`;
+let messageCount = 0;
+
+function startGame() {
+  document.removeEventListener("click", startGame);
+  document.querySelector("#instruction").innerText = "";
   const butterfly = document.querySelector(".butterfly");
   const gameDisplay = document.querySelector(".game-container");
   const grass = document.querySelector(".grass-moving");
 
   let butterflyLeft = 231;
   let butterflyBottom = 105;
-  let gravity = 2;
+  let gravityMagnitude = 3;
   let isGameOver = false;
   let gap = 452;
+  let score = 0;
 
-  function startGame() {
-    butterflyBottom -= gravity;
+  function gravity() {
+    butterflyBottom -= gravityMagnitude;
     butterfly.style.bottom = butterflyBottom + "px";
     butterfly.style.left = butterflyLeft + "px";
   }
-  let timerButterfly = setInterval(startGame, 20); // calls startGame every 20 milliseconds //
+  let timerGravity = setInterval(gravity, 20); // gravity effect every 20 milliseconds //
 
   function control(e) {
     if (e.keyCode === 32) {
@@ -28,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
       butterflyBottom += 53;
     }
     butterfly.style.bottom = butterflyBottom + "px";
-    console.log(butterflyBottom);
+    // console.log(butterflyBottom);
   }
   document.addEventListener("keyup", control); // "keyup" - when any key is pressed
 
@@ -48,6 +55,11 @@ document.addEventListener("DOMContentLoaded", () => {
     topWebs.style.left = websLeft + "px";
     webs.style.bottom = websBottom + "px";
     topWebs.style.bottom = websBottom + gap + "px";
+    if (!isGameOver) {
+      document.getElementById("score").innerHTML = `Score : ${score}`;
+      score++;
+      // console.log(score);
+    }
 
     function moveWebs() {
       websLeft -= 2;
@@ -55,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
       topWebs.style.left = websLeft + "px";
 
       if (websLeft === -63) {
-        clearInterval(timerWebs); // stop the webs timer setinterval from executing
+        clearInterval(timerFlight); // stop the webs timer setinterval from executing
         gameDisplay.removeChild(webs); // remove webs
         gameDisplay.removeChild(topWebs);
       }
@@ -68,10 +80,10 @@ document.addEventListener("DOMContentLoaded", () => {
         butterflyBottom <= 0
       ) {
         gameOver();
-        clearInterval(timerWebs);
+        clearInterval(timerFlight);
       }
     }
-    let timerWebs = setInterval(moveWebs, 20);
+    let timerFlight = setInterval(moveWebs, 20);
     if (!isGameOver) {
       setTimeout(generateWebs, 3000); // generates webs every 3 seconds
     }
@@ -79,11 +91,41 @@ document.addEventListener("DOMContentLoaded", () => {
   generateWebs();
 
   function gameOver() {
-    clearInterval(timerButterfly);
-    console.log("game over");
+    clearInterval(timerGravity);
+    // console.log("Game Over");
     isGameOver = true;
     document.removeEventListener("keyup", control); // remove event listener at keyup
     grass.classList.add("grass");
     grass.classList.remove("grass-moving");
+
+    if (messageCount === 0) {
+      const messageContainer = document.createElement("div");
+      const message = document.createElement("p");
+      message.innerText =
+        "Game over. Click on the watch button to watch LOONA's performance of Butterfly on Queendom 2. Click on the play button to play again.";
+      message.className = "message";
+      const watchButton = document.createElement("button");
+      watchButton.innerText = "Watch";
+      watchButton.setAttribute("id", "watch");
+      const playButton = document.createElement("button");
+      playButton.innerText = "Play";
+      playButton.setAttribute("id", "play");
+      messageContainer.append(message);
+      messageContainer.append(watchButton);
+      messageContainer.append(playButton);
+      document.querySelector(".title-score").append(messageContainer);
+      messageCount++;
+    }
+
+    function openTab() {
+      window.open("https://youtu.be/aXaHB4gGAys", "_blank");
+    }
+
+    function refresh() {
+      location.reload();
+    }
+    document.querySelector("#watch").addEventListener("click", openTab);
+
+    document.querySelector("#play").addEventListener("click", refresh);
   }
-});
+}
