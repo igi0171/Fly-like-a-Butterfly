@@ -1,20 +1,15 @@
 # Fly-like-a-Butterfly
 
-For the Moon Girls
-Inspired by their performance on Queendom 2 during the FANtastic round
-
 Remake of the Original Flappy Bird Using JS, CSS & HTML
 
-Explanations of the technologies used, the approach taken, installation instructions, unsolved problems
+## Technologies used and approach taken
 
-Absolute positioning is used for:
+**Absolute positioning** is used on all movement (flight, gravity) and to detect collision between the butterfly and a spider web.
 
-1. the movement of the butterfly (fly upwards)
-2. gravity
-3. the movement of the spider webs (left)
-4. the collision detection of the butterfly and the spider web
+**setInterval/setTimeout** is used for the gravity effect on the butterfly, the movement of the spider webs (flight of the butterfly) and the generation of new spider webs.
 
-setInterval is used for:
+[Link to game](https://fly-like-a-butterfly.netlify.app/)
 
-1. gravity
-2.
+For the Moon Girls :rabbit::cat::dove::bear::deer::owl::fish::bat::swan::penguin::butterfly::wolf:
+
+Adapted and inspired by their [performance](https://youtu.be/aXaHB4gGAys) for Orbits
