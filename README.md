@@ -14,12 +14,9 @@ For the Moon Girls :rabbit::cat::dove::bear::deer::owl::fish::bat::swan::penguin
 
 Adapted and inspired by their [performance](https://youtu.be/aXaHB4gGAys) for Orbits
 
-## Credit
+## Credits
 
 - GA SEI-37 and instructors
-
 - Stack Overflow
-
 - Google Fonts
-
 - [Youtube Tutorial](https://youtu.be/8xPsg6yv7TU)
