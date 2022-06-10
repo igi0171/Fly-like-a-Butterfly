@@ -10,13 +10,13 @@ Remake of the Original Flappy Bird Using JS, CSS & HTML
 
 [Link to game](https://fly-like-a-butterfly.netlify.app/)
 
-For the Moon Girls :rabbit::cat::dove::bear::deer::owl::fish::bat::swan::penguin::butterfly::wolf:
-
-Adapted and inspired by their [performance](https://youtu.be/aXaHB4gGAys) for Orbits
-
 ## Credits
 
 - GA SEI-37 and instructors
 - Stack Overflow
 - Google Fonts
 - [Youtube Tutorial](https://youtu.be/8xPsg6yv7TU)
+
+For the Moon Girls :rabbit::cat::dove::bear::deer::owl::fish::bat::swan::penguin::butterfly::wolf:
+
+Adapted and inspired by their [performance](https://youtu.be/aXaHB4gGAys) for Orbits
