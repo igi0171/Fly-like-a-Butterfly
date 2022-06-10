@@ -129,7 +129,6 @@ function startGame() {
 
       function openTab() {
         window.open("https://youtu.be/XEOCbFJjRw0", "_blank");
-        document.querySelector("#watch").removeEventListener("click", openTab);
       }
 
       function refresh() {
