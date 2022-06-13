@@ -10,18 +10,18 @@ Remake of the Original Flappy Bird Using JS, CSS & HTML
 
 ## Approach taken
 
-1. Create game container CSS and create sky,grass and butterfly CSS in game container.
-2. Create butterfly's gravity and fly function
-3. Create spider webs CSS, functions to generate and move spider webs and condition to remove spider webs.
-4. Create butterfly hitting grass and spider webs condition. (Stop generating spider webs)
-5. Create top spider webs.
+1. Create game container, sky, grass and butterfly CSS.
+2. Create butterfly's gravity and fly functions.
+3. Create spider webs CSS, functions to generate and move spider webs and condition for removing spider webs.
+4. Create butterfly hitting grass and colliding with spider webs condition.
+5. Create top spider webs CSS.
 6. Refine algorithm for collision detection against top and bottom spider webs.
-7. Final styling.
+7. Final overall styling.
 
 ## Unsolved problems / Further work
 
-- Butterfly is immune againt bottom right edge of top spider web.
-- Sometimes incoming spider web doesn't stop moving even after game is over.
+- Butterfly is immune againt bottom right edge of top spider web. (Could be lore)
+- Sometimes incoming spider web doesn't stop moving even after game is over. (Could be lore too)
 - Button to start the game again after game is over instead of reloading page.
 - Add best score feature.
 - Make the video start playing at 0:11 when the game begins and the player wins when the video reaches 4:48.
