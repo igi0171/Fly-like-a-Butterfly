@@ -26,7 +26,7 @@ Remake of the Original Flappy Bird Using JS, CSS & HTML
 - Add best score feature.
 - Make the video start playing at 0:11 when the game begins and the player wins when the video reaches 4:48.
 
-[Link to game](https://fly-like-a-butterfly.netlify.app/)
+## [Link to game](https://fly-like-a-butterfly.netlify.app/)
 
 ## Credits
 
@@ -35,6 +35,6 @@ Remake of the Original Flappy Bird Using JS, CSS & HTML
 - Google Fonts
 - [Youtube Tutorial](https://youtu.be/8xPsg6yv7TU)
 
-For the Moon Girls :rabbit::cat::dove::bear::deer::owl::fish::bat::swan::penguin::butterfly::wolf:
+## For the Moon Girls :rabbit::cat::dove::bear::deer::owl::fish::bat::swan::penguin::butterfly::wolf:
 
 Adapted and inspired by their [performance](https://youtu.be/aXaHB4gGAys) for Orbits
