@@ -2,11 +2,29 @@
 
 Remake of the Original Flappy Bird Using JS, CSS & HTML
 
-## Technologies used and approach taken
+## Technologies used
 
 **Absolute positioning** is used on all movement (flight, gravity) and to detect collision between the butterfly and a spider web.
 
 **setInterval/setTimeout** is used for the gravity effect on the butterfly, the movement of the spider webs (flight of the butterfly) and the generation of new spider webs.
+
+## Approach taken
+
+1. Create game container CSS and create sky,grass and butterfly CSS in game container.
+2. Create butterfly's gravity and fly function
+3. Create spider webs CSS, functions to generate and move spider webs and condition to remove spider webs.
+4. Create butterfly hitting grass and spider webs condition. (Stop generating spider webs)
+5. Create top spider webs.
+6. Refine algorithm for collision detection against top and bottom spider webs.
+7. Final styling.
+
+## Unsolved problems / Further work
+
+- Butterfly is immune againt bottom right edge of top spider web.
+- Sometimes incoming spider web doesn't stop moving even after game is over.
+- Button to start the game again after game is over instead of reloading page.
+- Add best score feature.
+- Make the video start playing at 0:11 when the game begins and the player wins when the video reaches 4:48.
 
 [Link to game](https://fly-like-a-butterfly.netlify.app/)
 
