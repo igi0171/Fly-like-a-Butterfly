@@ -18,7 +18,7 @@ Remake of the Original Flappy Bird Using JS, CSS & HTML
 6. Refine algorithm for collision detection against top and bottom spider webs.
 7. Final overall styling.
 
-## Unsolved problems / Further work
+## Unsolved problems / Further work / Next steps
 
 - Butterfly is immune againt bottom right edge of top spider web. (Could be lore)
 - Sometimes incoming spider web doesn't stop moving even after game is over. (Could be lore too)
